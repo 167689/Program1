@@ -1,17 +1,31 @@
 import java.util.Scanner;
 class Main {
+  static Scanner scan = new Scanner(System.in);
   public static void main(String[] args) {
+        System.out.println("Witaj w programie przeliczającym kody liczbowe");
+     System.out.println("Aby przeliczyć  liczbę dziesiętną wpisz 1");
+     System.out.println("Aby przeliczyć na  liczbę dziesiętną wpisz 2");
+    int wersja =scan.nextInt();
+    if(wersja==1)
+    {
+     zDEC();
+
+    }
+    else
+    {
+      
+    }
+    scan.close();
+  }
+  
+  public static void zDEC()
+  {
     int wariant;
     int i=0;
     int[] wynik= new int[100];
     char[] wynikh= new char[100];
     int j;
-  
-    
-        System.out.println("Witaj w programie przeliczającym kody liczbowe");
-  
     System.out.println("Podaj liczę dziesiętną dodatnią");
-     Scanner scan = new Scanner(System.in);
     int liczba =scan.nextInt();
     if(liczba<0){
       wariant =5;
@@ -28,7 +42,7 @@ class Main {
     System.out.println("3 Dziesiętny (DEC)");
     System.out.println("4 Szesnastkoy (HEX)");
     wariant =scan.nextInt();
-      scan.close();
+      
     }
     
      
@@ -151,6 +165,6 @@ class Main {
         break;
   }
   }
-  
-}
+  }
+
         
