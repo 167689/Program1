@@ -4,11 +4,12 @@ class Main {
     int wariant;
     int i=0;
     int[] wynik= new int[100];
+    char[] wynikh= new char[100];
     int j;
-
+  
     
         System.out.println("Witaj w programie przeliczającym kody liczbowe");
-
+  
     System.out.println("Podaj liczę dziesiętną dodatnią");
      Scanner scan = new Scanner(System.in);
     int liczba =scan.nextInt();
@@ -27,6 +28,7 @@ class Main {
     System.out.println("3 Dziesiętny (DEC)");
     System.out.println("4 Szesnastkoy (HEX)");
     wariant =scan.nextInt();
+      scan.close();
     }
     
      
@@ -60,11 +62,86 @@ class Main {
         
         break;
       case 3:
-         
+         System.out.println("Liczba to : "+ liczba);
         
         break;
       case 4:
-         
+         System.out.println("Liczba to :");
+         while(liczba>0)
+          {                                                 
+             if(liczba%16==1)
+          {
+          wynikh[i]='1';
+          }
+            else if(liczba%16==2)
+          {
+          wynikh[i]='2';
+          }
+            else if(liczba%16==3)
+          {
+          wynikh[i]='3';
+          }
+            else if(liczba%16==4)
+          {
+          wynikh[i]='4';
+          }
+            else if(liczba%16==5)
+          {
+          wynikh[i]='5';
+          }
+            else if(liczba%16==6)
+          {
+          wynikh[i]='6';
+          }
+            else if(liczba%16==7)
+          {
+          wynikh[i]='7';
+          }else if(liczba%16==8)
+          {
+          wynikh[i]='8';
+          }
+            else if(liczba%16==9)
+          {
+          wynikh[i]='9';
+          }
+           else if(liczba%16==10)
+          {
+           wynikh[i]='A';
+            
+          }
+          else if(liczba%16==11)
+          {
+          wynikh[i]='B';
+          }
+          else if(liczba%16==12)
+          {
+          wynikh[i]='C';
+          }
+          else if(liczba%16==13)
+          {
+          wynikh[i]='D';
+          }
+          else if(liczba%16==14)
+          {
+          wynikh[i]='E';
+          }
+          else if(liczba%16==15)
+          {
+          wynikh[i]='F';
+          }
+          else 
+          {
+          wynikh[i]='0';
+          
+          }
+            liczba=liczba/16;
+            i++;
+            }
+        for (j=i-1;j>=0;j--)
+          {
+            System.out.print(wynikh[j]); 
+          }
+          
         break;
         case 5:
           System.out.println("Nieprawidłowa liczba");
